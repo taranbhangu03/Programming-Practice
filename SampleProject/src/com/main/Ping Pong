@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class ppingpong {
+	
+	public static void main(String args[]){
+	
+    Scanner in =new Scanner(System.in);
+    System.out.println("Enter The Number");
+    int number =in.nextInt();
+    if(number%3==0&&number%5==0){
+    	System.out.println("Ping");
+    }
+    else if(number%3==0)
+    {
+    	System.out.println("PING");
+    }
+    else if(number%5==0)
+    {
+    	System.out.println("PONG");
+    }
+    else
+    {
+    	System.out.println("number");
+    }
+}
+}
