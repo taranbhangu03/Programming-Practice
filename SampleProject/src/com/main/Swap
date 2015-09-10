@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Swap {
+
+	public static void main(String[] args) {
+		int c;
+		
+		System.out.println("Enter The Value of a");
+        int a=new Scanner(System.in).nextInt();
+        System.out.println("Enter The value of b");
+        int b=new Scanner(System.in).nextInt();
+        System.out.println("The Value of a before swaping is" +a);
+        System.out.println("The Value of b before swaping is" +b);
+        
+	
+	a=a+b;
+	b=a-b;
+	a=a-b;
+	System.out.println("The value of a after swaping is"+a);
+	System.out.println("The Value of b before swaping is" +b);
+	
+	
+}
+}
