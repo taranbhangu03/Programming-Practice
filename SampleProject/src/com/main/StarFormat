@@ -1,0 +1,23 @@
+public class Star
+{
+              public void printStar(String s){
+				
+					int i=1,j;
+					System.out.println("Enter the number of row");
+					int num=new Scanner(System.in).nextInt();
+					for(i=1;i<=num;i++){
+						for(j=1;j<=i;j++){
+							System.out.print(s);
+						}
+
+						System.out.println();
+						}
+				}
+
+				public static void main(String[] args) {
+					
+					Star star=new Star();
+			      star.printStar("*");
+				
+			  }
+	}
