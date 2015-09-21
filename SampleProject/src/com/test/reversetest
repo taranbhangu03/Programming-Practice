@@ -1,0 +1,19 @@
+package com.test;
+
+import static org.testng.AssertJUnit.assertEquals;
+import org.testng.annotations.Test;
+
+import com.main.Example;
+
+public class ExampleTest {
+  @Test
+  public void TestMethod1() {
+	  Example ex=new Example();
+	  String str="hello";
+	  String actual=ex.sortString(str);
+	  String expected="ehllo";
+	  assertEquals(expected,actual);
+	  
+	  
+  }
+}
