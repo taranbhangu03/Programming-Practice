@@ -1,0 +1,29 @@
+package Exception;
+
+public class ExceptionHanling {
+
+	public static void main(String[] args) {
+		try{
+		int a=50;
+		int b=7;
+		int c=a/b;
+		System.out.println("value of c ="+c);
+		try{
+			String s= "Taran";
+			System.out.println("converting to string"+  s.toString());
+		}
+		catch(NullPointerException e){
+			System.out.println("null pointer occured");
+			e.printStackTrace();
+		}
+	}
+		catch(ArithmeticException e){
+			System.out.println("exception occured");
+			e.printStackTrace();
+		}
+finally{
+	System.out.println("finally executed");
+}
+		System.out.println("exception handled");
+}
+}
