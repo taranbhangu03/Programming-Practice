@@ -1,0 +1,49 @@
+package com.test;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.main.Merge;
+public class TestMerge {
+	
+	@Test
+	public void testPositiveNumbers(){
+		
+		Assert.assertEquals(Merge.merge(new int[]{1,2,5}, new int[]{4,8,6}), new int[]{1,2,3,4,5,6});
+	}
+	
+	@Test
+	public void testNegativeNumbers(){
+		
+		Assert.assertEquals(Merge.merge(new int[]{-1,-2,-5}, new int[]{-4,-8,-6}), new int[]{-1,-2,-3,-4,-5,-6});
+	}
+	
+	@Test
+	public void testSameNumber(){
+		
+		Assert.assertEquals(Merge.merge(new int[]{1,1,1}, new int[]{1,1,1}), new int[]{1,1,1,1,1,1});
+	}
+	
+	@Test
+	public void testZeroNumbers(){
+		
+		Assert.assertEquals(Merge.merge(new int[]{0,0}, new int[]{0,0,0}), new int[]{0,0,0,0,0});
+	}
+	
+	@Test
+	public void testEmptyArray(){
+		
+		Assert.assertEquals(Merge.merge(new int[]{}, new int[]{}), new int[]{});
+	}
+	
+
+	@Test(expectedExceptions = NullPointerException.class)
+	public void testNull(){
+		
+		Assert.assertNull(Merge.merge(null, null));
+	}
+	
+	
+	}
+
+
