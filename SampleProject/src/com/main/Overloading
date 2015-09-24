@@ -1,0 +1,22 @@
+package programmingpractice;
+
+public class Overloading {
+ 
+	public Overloading(){
+		System.out.println("Overloading Practice");
+	}
+	public static void main(String[] args) {
+		Overloading over=new Overloading();
+		int result=over.add(4,8);
+		System.out.println("Result of method1 "+result);
+		int result1=over.add(5,4,6);
+		System.out.println("Result of method2 "+result1);
+	}
+		public int add(int a,int b){
+			return a+b;
+			
+		}
+        public int add(int a,int b,int c){
+        	return a+b+c;
+        }
+	}
