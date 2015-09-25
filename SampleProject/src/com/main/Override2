@@ -1,0 +1,24 @@
+package programmingpractice;
+
+public class Override {
+
+	public int add(int a,int b){ 
+		return a+b;
+	}
+	public int add(int a,int b,int c){
+		return a+b+c;
+	}
+	public int add(int a,int b,int c,int d){
+		return a+b+c+d;
+
+}
+	
+	
+	public static void main(String args[])
+    {
+	Override obj = new Override ();
+    	System.out.println("Sum of two numbers: "+obj.add(10, 21));
+    	System.out.println("Sum of three numbers: "+obj.add(10, 21, 22));
+    	System.out.println("Sum of four numbers: "+obj.add(20, 11, 22, 23));
+}
+}
