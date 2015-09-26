@@ -1,0 +1,22 @@
+package WhiteBox;
+
+import java.util.ArrayList;
+
+public class Arraylist {
+
+	 
+    public static void main(String a[]){
+        ArrayList<String> arrlist = new ArrayList<String>();
+        arrlist.add("Taran");
+        arrlist.add("Adarsh");
+        arrlist.add("Aris");
+        arrlist.add("Bruno");
+        System.out.println("Actual ArrayList:"+arrlist);
+        String[] strArr = new String[arrlist.size()];
+        arrlist.toArray(strArr);
+        System.out.println("Created Array content:");
+        for(String str:strArr){
+            System.out.println(str);
+        }
+    }
+}
