@@ -1,0 +1,30 @@
+package com.test;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.main.Palidrome;
+
+public class PalidromeTest {
+
+	@Test
+	public void palidromePositive(){
+		Assert.assertTrue(Palidrome.isPlidromae("Pop"));
+		}
+	@Test
+	public void palidromeNegative(){
+		Assert.assertFalse(Palidrome.isPlidromae("Taran"));
+	}
+	@Test
+	public void nullTest(){
+		try{
+			Palidrome.isPlidromae(null);
+			Assert.fail();
+			}
+		catch(NullPointerException e){
+			Assert.assertTrue(true);
+			
+		}
+	}
+	
+}
