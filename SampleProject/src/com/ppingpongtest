@@ -1,0 +1,24 @@
+import com.main.ppingpong;
+
+public class TestPingPong {
+	
+	@Test
+	public void positive3DivisionTest(){
+		
+		Assert.assertEquals(ppingpong.print(15), "ping");
+		
+	}
+	
+	@Test
+	public void positive5DivisionTest(){
+		
+		Assert.assertEquals(ppingpong.print(30), "pong");
+		
+	}
+	
+	@Test
+	public void positiveDualDivisionTest(){
+		
+		Assert.assertEquals(ppingpong.print(15), "ping pong");
+		
+	}
