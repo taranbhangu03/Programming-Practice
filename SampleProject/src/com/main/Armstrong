@@ -1,0 +1,44 @@
+package com.main;
+
+import java.util.Scanner;
+
+public class Armstrong {
+	
+		int number;
+		
+		void getVal() {
+			
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Check Armstrong Number or not");
+			
+			System.out.println("\nEnter the number");
+			number = Integer.parseInt(scan.nextLine());		
+		}
+	 
+		void armstrong() {
+			
+			int temp = number;
+			int sum = 0;
+			int mod = 0;
+			
+			while(temp != 0) {
+				
+				mod = temp % 10;
+				sum = sum + (mod * mod * mod);
+				temp = temp / 10;
+			}
+			
+			if(sum == number) 
+				System.out.println(number + " is an Armstrong number");
+			else
+				System.out.println(number + " is not an Armstrong number");
+		}
+		
+		public static void main(String args[]) {
+			
+			Armstrong obj = new Armstrong();
+			
+			obj.getVal();
+			obj.armstrong();
+		}
+	}
