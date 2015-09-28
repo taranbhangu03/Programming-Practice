@@ -1,0 +1,59 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Comparator;
+import java.util.Scanner;
+import java.util.TreeSet;
+ 
+
+public class Alphabetically {
+
+    	 
+    	    public static void main(String a[]) throws IOException{
+    	         
+    	    	 int count= 0;
+    			  Scanner sc=new Scanner(System.in);
+    				int vowelcounter = 0;
+    				
+    		      FileReader fr = new FileReader("C:\\AdvanceJava\\DesignPattern.txt");
+    		      BufferedReader br = new BufferedReader(fr); 
+    		      String text;
+    		      
+    		     String str= readFile("C:\\AdvanceJava\\DesignPattern.txt");
+    		      TreeSet<String> ts = new TreeSet<String>(new MyComp());
+    		    
+    	       
+    	   
+    	        System.out.println(str);
+    	    }
+    	    
+    	    static String readFile(String fileName) throws IOException {
+    	        BufferedReader br = new BufferedReader(new FileReader(fileName));
+    	        try {
+    	            StringBuilder sb = new StringBuilder();
+    	            String line = br.readLine();
+    	            TreeSet<String> ts = new TreeSet<String>(new MyComp());
+        		    
+    	            while (line != null) {
+    	                sb.append(line);
+    	                sb.append("\n");
+    	                line = br.readLine();
+    	                System.out.println(sb.toString());
+    	            }
+    	            return sb.toString();
+    	        } finally {
+    	            br.close();
+    	        }
+    	    }
+    	}
+    	 
+    	class MyComp implements Comparator<String>{
+    	 
+    	    @Override
+    	    public int compare(String str1, String str2) {
+    	        return str1.compareTo(str2);
+    	    }
+    	     
+    	}
+    
