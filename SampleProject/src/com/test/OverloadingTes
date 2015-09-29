@@ -1,0 +1,26 @@
+package com.test;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.main.Overloading;
+
+public class OverloadingTest {
+	
+	Overloading oload = new Overloading ();
+	
+	@Test
+	public void testOverloadWithZero(){
+		
+		Assert.assertEquals(oload.add(0, 0, 0), 0);
+		
+	}
+	@Test
+	public void testOverload(){
+		
+		Assert.assertEquals(oload.add(9, 4, 6), 12);
+		
+	}
+		
+	}
+	
