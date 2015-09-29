@@ -1,0 +1,26 @@
+package com.main;
+
+import java.util.Arrays;
+
+public class Enum {
+
+	public enum months{
+		January,
+		February,
+		March,
+		April,
+		May,
+		June,
+		July,
+		August,
+		Setember,
+		October,
+		November,
+		December
+	}
+	public static void main(String[] args) {
+		System.out.println(Arrays.asList(months.values()));
+
+	}
+
+}
